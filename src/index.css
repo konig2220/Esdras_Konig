@@ -1,0 +1,25 @@
+@import "tailwindcss";
+*{
+    box-sizing: border-box;
+}
+
+/* index.css ou global.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE et Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 15s linear infinite;
+}
